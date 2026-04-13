@@ -67,14 +67,13 @@ gombHozzaad.onclick = function() {
 
     // --- IDE ÍRD ---
 var nev = nevInput.value;//nev kiolvas
-
-var li = document.createElement("li");
+var li = document.createElement("li");//uj nev hozzaad
 li.textContent = nev;
-
 nevLista.appendChild(li);
+if (nevInput.value !== "") { 
+        return }
 
 };
-
 
 // ============================================
 //  5e. FELADAT: Megjelenítés / elrejtés (toggle)
@@ -84,6 +83,8 @@ nevLista.appendChild(li);
 
 var gombToggle = document.getElementById("gomb-toggle");
 var rejtettSzoveg = document.getElementById("rejtett-szoveg");
+var datum = new Date().toLocaleTimeString("hu-HU");
+
 
 gombToggle.onclick = function() {
     // --- FELADAT: ha látszik → rejtsd el, ha rejtett → mutasd meg ---
@@ -92,6 +93,7 @@ gombToggle.onclick = function() {
         rejtettSzoveg.style.display = "block";
     } else {
         rejtettSzoveg.style.display = "none";
+        console.log(datum);
     }
 };
 
