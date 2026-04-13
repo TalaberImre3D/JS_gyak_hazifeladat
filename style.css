@@ -1,16 +1,4 @@
-/* ============================================
-   METU GYAKORLÓ — style.css
-   ============================================
-   
-   Feladatok:
-   - A "KÉSZ" részeknél nézd meg hogyan működik
-   - A "FELADAT" részeknél töltsd ki te!
-   
-   ============================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-/* --- RESET --- */
 * {
     margin: 0;
     padding: 0;
@@ -63,11 +51,13 @@ body {
    - align-items: center
    ================================ */
 .navbar {
-    background: white;
+    background: rgb(182, 126, 126);
     padding: 1rem 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-
+    display: flex;
+    justify-content: space-between;
+    
     /* --- FELADAT: írd ide a flexbox-ot --- */
 
 
@@ -79,17 +69,19 @@ body {
 }
 
 .nav-lista {
-    list-style: none;
-
+    display: flex;
+    gap: 1rem;
     /* --- FELADAT: a linkek legyenek egymás MELLETT --- */
     /* Tipp: display: flex; gap: 1rem; */
-
-
 }
 
 .nav-link {
     text-decoration: none;
     color: #555;
+    display: flex;
+    display:flex;
+    flex-wrap:wrap;
+    gap: 1rem;
 }
 
 .nav-link:hover {
@@ -110,9 +102,10 @@ body {
    - flex: 1     (egyenlő szélességűek lesznek)
    ================================ */
 .kartya-sor {
-
-    /* --- FELADAT: írd ide a flexbox-ot --- */
-    display: flex;
+display: flex;
+gap: 1rem;
+justify-content: space-between;
+    
 
 
 }
@@ -122,10 +115,7 @@ body {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-
-    /* --- FELADAT: adj hozzá flex: 1 --- */
-
-
+    flex:1;
 }
 
 .kartya-cim {
@@ -153,10 +143,10 @@ body {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-
-    /* --- FELADAT: írd ide a flexbox-ot --- */
-
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .profil-kep {
@@ -164,10 +154,7 @@ body {
     height: 80px;
     background: #ddd;
     border-radius: 50%;
-
-    /* --- FELADAT: adj hozzá flex-shrink: 0 --- */
-    /* (hogy ne zsugorodjon össze) */
-
+    flex-shrink: 0.5;
 }
 
 .profil-nev {
@@ -185,24 +172,14 @@ body {
     color: #555;
 }
 
-
-/* ================================
-   4. LÁBLÉC — FELADAT
-   
-   Cél: bal szöveg BALRA, jobb szöveg JOBBRA
-   
-   Írd ide:
-   - display: flex
-   - justify-content: space-between
-   ================================ */
 .lablec {
     background: #333;
     color: #fff;
     padding: 1rem 1.5rem;
     border-radius: 10px;
-
-    /* --- FELADAT: írd ide a flexbox-ot --- */
-
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
 
 }
 

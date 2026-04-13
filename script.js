@@ -1,46 +1,6 @@
-// ============================================
-//  METU GYAKORLÓ — script.js
-// ============================================
-//
-//  Ez a JavaScript fájl az index.html-hez tartozik.
-//  Oldd meg a feladatokat sorban!
-//
-//  FONTOS:
-//  - F12 → Console tab → itt látod a console.log üzeneteket
-//  - Ha valami nem működik, a Console-ban pirossal jelzi a hibát
-//
-// ============================================
-
-
-// ============================================
-//  0. LÉPÉS: CONSOLE.LOG — próbáld ki!
-// ============================================
-//  A console.log() kiír valamit a böngésző konzolba (F12).
-//  Nem a weboldalon jelenik meg, hanem a fejlesztői eszközökben!
-
 console.log("Hello! A script.js sikeresen betöltődött.");
 console.log("Nyisd meg a konzolt: F12 → Console tab");
-
-//  FELADAT: Írd ki a saját neved a konzolba!
-//  Példa: console.log("Kiss Anna");
-
-// --- IDE ÍRD ---
-
-
-
-
-// ============================================
-//  5a. FELADAT: Szöveg megváltoztatása
-// ============================================
-//
-//  Cél: ha rákattintunk a gombra, a bekezdés szövege megváltozik.
-//
-//  Lépések:
-//  1. Keresd meg az elemet: document.getElementById("szoveg-1")
-//  2. Keresd meg a gombot: document.getElementById("gomb-1")
-//  3. A gomb onclick-jére írd meg a változtatást
-//
-//  Tipp: elem.textContent = "új szöveg";
+console.log("Talabér Imre");
 
 var szoveg1 = document.getElementById("szoveg-1");
 var gomb1 = document.getElementById("gomb-1");
@@ -48,47 +8,19 @@ var gomb1 = document.getElementById("gomb-1");
 gomb1.onclick = function() {
     // --- FELADAT: változtasd meg a szoveg1 szövegét ---
     // Példa: szoveg1.textContent = "Megváltoztam!";
-
-    // --- IDE ÍRD ---
-
-
+szoveg1.textContent = "Hello there general Kenobi!"
 };
-
-
-// ============================================
-//  5b. FELADAT: Háttérszín megváltoztatása
-// ============================================
-//
-//  Cél: ha rákattintunk a gombra, a doboz háttérszíne megváltozik.
-//
-//  Tipp: elem.style.backgroundColor = "lightblue";
-//
-//  Színek amiket használhatsz:
-//  "lightblue", "salmon", "lightgreen", "#ff6600", "#3366ff"
 
 var szinesdoboz = document.getElementById("szines-doboz");
 var gomb2 = document.getElementById("gomb-2");
+var szinek = ["red", "blue", "green", "lightblue"];
+let index = 0;
 
 gomb2.onclick = function() {
-    // --- FELADAT: változtasd meg a szinesdoboz háttérszínét ---
-
-    // --- IDE ÍRD ---
-
+    szinesdoboz.style.backgroundColor = szinek[index];
+    index++;
 
 };
-
-
-// ============================================
-//  5c. FELADAT: Számláló
-// ============================================
-//
-//  Cél: a + gomb növeli, a - gomb csökkenti a számot.
-//
-//  Lépések:
-//  1. Hozz létre egy változót: var ertek = 0;
-//  2. A + gombnál: ertek = ertek + 1;
-//  3. Írd ki: szamlaloElem.textContent = ertek;
-//  4. A - gombnál: ertek = ertek - 1;
 
 var szamlaloElem = document.getElementById("szamlalo");
 var gombPlus = document.getElementById("gomb-plus");
@@ -96,20 +28,20 @@ var gombMinus = document.getElementById("gomb-minus");
 
 var ertek = 0;
 
-gombPlus.onclick = function() {
-    // --- FELADAT: növeld az értéket 1-gyel és jelenítsd meg ---
-
-    // --- IDE ÍRD ---
-
-
+gombPlus.onclick = function() {//hozzaadas
+    ertek++;
+    szamlaloElem.textContent = ertek;
 };
 
-gombMinus.onclick = function() {
-    // --- FELADAT: csökkentsd az értéket 1-gyel és jelenítsd meg ---
-
-    // --- IDE ÍRD ---
-
-
+gombMinus.onclick = function() {//kivonás
+    
+    if(ertek>0){
+        ertek = ertek-1;
+        szamlaloElem.textContent = ertek;
+    }
+    else{
+        return;
+    }
 };
 
 
@@ -134,7 +66,12 @@ gombHozzaad.onclick = function() {
     // --- FELADAT: olvasd ki a nevet és add hozzá a listához ---
 
     // --- IDE ÍRD ---
+var nev = nevInput.value;//nev kiolvas
 
+var li = document.createElement("li");
+li.textContent = nev;
+
+nevLista.appendChild(li);
 
 };
 
@@ -144,23 +81,18 @@ gombHozzaad.onclick = function() {
 // ============================================
 //
 //  Cél: ha kattintunk, a szöveg eltűnik. Ha újra kattintunk, megjelenik.
-//
-//  Tipp: 
-//  if (elem.style.display === "none") {
-//      elem.style.display = "block";
-//  } else {
-//      elem.style.display = "none";
-//  }
 
 var gombToggle = document.getElementById("gomb-toggle");
 var rejtettSzoveg = document.getElementById("rejtett-szoveg");
 
 gombToggle.onclick = function() {
     // --- FELADAT: ha látszik → rejtsd el, ha rejtett → mutasd meg ---
-
-    // --- IDE ÍRD ---
-
-
+    
+    if (rejtettSzoveg.style.display === "none") {
+        rejtettSzoveg.style.display = "block";
+    } else {
+        rejtettSzoveg.style.display = "none";
+    }
 };
 
 
