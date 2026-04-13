@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METU Gyakorló oldal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="oldal-cim">METU Gyakorló oldal</h1>
+    <p class="oldal-alcim">HTML + CSS + JavaScript alapok</p>
+
+    <!-- ========================
+         1. FLEXBOX GYAKORLÁS
+         ======================== -->
+
+    <!-- 1a. Navigáció -->
+    <h2 class="feladat-cim">1. Navigáció (flexbox)</h2>
+    <nav class="navbar">
+        <span class="nav-logo">METUdesign</span>
+        <ul class="nav-lista">
+            <li><a href="#" class="nav-link">Főoldal</a></li>
+            <li><a href="#" class="nav-link">Rólunk</a></li>
+            <li><a href="#" class="nav-link">Kapcsolat</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1b. Kártyák -->
+    <h2 class="feladat-cim">2. Kártyák egymás mellett (flexbox)</h2>
+    <div class="kartya-sor">
+        <div class="kartya">
+            <h3 class="kartya-cim">Fotózás</h3>
+            <p class="kartya-szoveg">Portré, termék, rendezvény.</p>
+        </div>
+        <div class="kartya">
+            <h3 class="kartya-cim">Videó</h3>
+            <p class="kartya-szoveg">Reklámfilm, interjú, klip.</p>
+        </div>
+        <div class="kartya">
+            <h3 class="kartya-cim">Animáció</h3>
+            <p class="kartya-szoveg">2D, 3D, motion graphics.</p>
+        </div>
+    </div>
+
+    <!-- 1c. Profil kártya -->
+    <h2 class="feladat-cim">3. Profil kártya (flexbox: center)</h2>
+    <div class="profil">
+        <div class="profil-kep"></div>
+        <div class="profil-info">
+            <h3 class="profil-nev">Kiss Anna</h3>
+            <p class="profil-szak">Médiadesign szak, 2. évfolyam</p>
+            <p class="profil-bio">Webfejlesztés és UX design iránt érdeklődöm. Szabadidőmben fotózok.</p>
+        </div>
+    </div>
+
+    <!-- 1d. Lábléc -->
+    <h2 class="feladat-cim">4. Lábléc (flexbox: space-between)</h2>
+    <footer class="lablec">
+        <span class="lablec-bal">© 2025 METU</span>
+        <span class="lablec-jobb">Médiadesign Tanszék</span>
+    </footer>
+
+
+    <!-- ========================
+         2. JAVASCRIPT GYAKORLÁS
+         ======================== -->
+
+    <h2 class="feladat-cim">5. JavaScript gyakorlatok</h2>
+
+    <!-- 5a. Szöveg megváltoztatása -->
+    <div class="js-doboz">
+        <p class="js-cimke">5a. Kattints a gombra → a szöveg megváltozik</p>
+        <p id="szoveg-1">Ez az eredeti szöveg.</p>
+        <button id="gomb-1" class="js-gomb">Változtasd meg!</button>
+    </div>
+
+    <!-- 5b. Szín megváltoztatása -->
+    <div class="js-doboz">
+        <p class="js-cimke">5b. Kattints a gombra → a doboz háttérszíne megváltozik</p>
+        <div id="szines-doboz" class="szines-doboz">Ez a doboz</div>
+        <button id="gomb-2" class="js-gomb">Színezd át!</button>
+    </div>
+
+    <!-- 5c. Számláló -->
+    <div class="js-doboz">
+        <p class="js-cimke">5c. Készíts egy számlálót: + és - gombokkal</p>
+        <p class="szamlalo-kijelzo">Érték: <span id="szamlalo">0</span></p>
+        <div class="szamlalo-gombok">
+            <button id="gomb-minus" class="js-gomb">−</button>
+            <button id="gomb-plus" class="js-gomb">+</button>
+        </div>
+    </div>
+
+    <!-- 5d. Lista bővítés -->
+    <div class="js-doboz">
+        <p class="js-cimke">5d. Írd be a neved és add hozzá a listához</p>
+        <input type="text" id="nev-input" class="js-input" placeholder="Írd be a neved...">
+        <button id="gomb-hozzaad" class="js-gomb">Hozzáadás</button>
+        <ul id="nev-lista" class="nev-lista"></ul>
+    </div>
+
+    <!-- 5e. Megjelenítés / elrejtés -->
+    <div class="js-doboz">
+        <p class="js-cimke">5e. Kattintásra jelenjen meg / tűnjön el a szöveg</p>
+        <button id="gomb-toggle" class="js-gomb">Mutasd / Rejtsd</button>
+        <p id="rejtett-szoveg" class="rejtett-szoveg">🎉 Most látszok! Hurrá!</p>
+    </div>
+
+    <!-- KONZOL -->
+    <div class="js-doboz">
+        <p class="js-cimke">📋 Nyisd meg a böngésző konzolt: F12 → Console tab</p>
+        <p class="js-tipp">A script.js fájlban lévő console.log() üzenetek ITT jelennek meg.</p>
+    </div>
+
+
+    <!-- JAVASCRIPT FÁJL BETÖLTÉSE -->
+    <script src="script.js"></script>
+
+</body>
+</html>

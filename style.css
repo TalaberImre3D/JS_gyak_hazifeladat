@@ -1,0 +1,309 @@
+/* ============================================
+   METU GYAKORLÓ — style.css
+   ============================================
+   
+   Feladatok:
+   - A "KÉSZ" részeknél nézd meg hogyan működik
+   - A "FELADAT" részeknél töltsd ki te!
+   
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* --- OLDAL CÍM --- */
+.oldal-cim {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.oldal-alcim {
+    text-align: center;
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+
+/* --- FELADAT CÍMEK --- */
+.feladat-cim {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    margin: 2rem 0 1rem;
+    border-radius: 6px;
+}
+
+
+/* ================================
+   1. NAVIGÁCIÓ — FELADAT
+   
+   Cél: a logo BALRA, a menü JOBBRA kerüljön
+   
+   Írd ide:
+   - display: flex
+   - justify-content: space-between
+   - align-items: center
+   ================================ */
+.navbar {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+    /* --- FELADAT: írd ide a flexbox-ot --- */
+
+
+}
+
+.nav-logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.nav-lista {
+    list-style: none;
+
+    /* --- FELADAT: a linkek legyenek egymás MELLETT --- */
+    /* Tipp: display: flex; gap: 1rem; */
+
+
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #555;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+
+/* ================================
+   2. KÁRTYÁK — FELADAT
+   
+   Cél: a 3 kártya legyen EGYMÁS MELLETT
+   
+   Írd ide:
+   - display: flex
+   - gap: 1rem
+   
+   A .kartya-ra:
+   - flex: 1     (egyenlő szélességűek lesznek)
+   ================================ */
+.kartya-sor {
+
+    /* --- FELADAT: írd ide a flexbox-ot --- */
+    display: flex;
+
+
+}
+
+.kartya {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+    /* --- FELADAT: adj hozzá flex: 1 --- */
+
+
+}
+
+.kartya-cim {
+    margin-bottom: 0.5rem;
+}
+
+.kartya-szoveg {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+
+/* ================================
+   3. PROFIL KÁRTYA — FELADAT
+   
+   Cél: a kép és a szöveg EGYMÁS MELLETT
+   
+   Írd ide:
+   - display: flex
+   - align-items: center
+   - gap: 1.5rem
+   ================================ */
+.profil {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+    /* --- FELADAT: írd ide a flexbox-ot --- */
+
+
+}
+
+.profil-kep {
+    width: 80px;
+    height: 80px;
+    background: #ddd;
+    border-radius: 50%;
+
+    /* --- FELADAT: adj hozzá flex-shrink: 0 --- */
+    /* (hogy ne zsugorodjon össze) */
+
+}
+
+.profil-nev {
+    margin-bottom: 0.2rem;
+}
+
+.profil-szak {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+}
+
+.profil-bio {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/* ================================
+   4. LÁBLÉC — FELADAT
+   
+   Cél: bal szöveg BALRA, jobb szöveg JOBBRA
+   
+   Írd ide:
+   - display: flex
+   - justify-content: space-between
+   ================================ */
+.lablec {
+    background: #333;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+
+    /* --- FELADAT: írd ide a flexbox-ot --- */
+
+
+}
+
+.lablec-bal, .lablec-jobb {
+    font-size: 0.85rem;
+}
+
+
+/* ================================
+   5. JAVASCRIPT GYAKORLATOK — KÉSZ
+   (Ezt nem kell módosítanod)
+   ================================ */
+.js-doboz {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 1rem;
+}
+
+.js-cimke {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+    color: #555;
+}
+
+.js-tipp {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.js-gomb {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    margin-top: 0.5rem;
+}
+
+.js-gomb:hover {
+    background: #555;
+}
+
+.js-input {
+    border: 2px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    margin-right: 0.5rem;
+    width: 200px;
+}
+
+.js-input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.szines-doboz {
+    background: #eee;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.szamlalo-kijelzo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.szamlalo-gombok {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nev-lista {
+    list-style: none;
+    margin-top: 0.8rem;
+}
+
+.nev-lista li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.rejtett-szoveg {
+    background: #d4edda;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+}
